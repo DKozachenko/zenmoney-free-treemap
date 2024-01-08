@@ -10,7 +10,13 @@
     "128": "icons/128.png"
   },
   "action": {
-    "default_popup": "pages/popup.html"
+    "default_popup": "pages/popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
   },
   "content_scripts": [
     {
@@ -23,6 +29,8 @@
       "include_globs" :   ["*/#reports/treemap"]
     }
   ],
-  "permissions": [],
-  "background": {}
+  "permissions": ["activeTab", "tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }

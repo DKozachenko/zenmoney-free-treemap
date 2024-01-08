@@ -9,25 +9,44 @@ body {
 }
 
 .container {
-  width: 220px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .title {
-  margin: 0 0 15px 0;
   font-size: 16px;
+  margin: 0;
 }
 
-.show-button {
-  font-size: 13px;
+.state {
   width: 100%;
-  color:white;
-  background: linear-gradient(#01a9e1, #5bc4bc);
-  border-width: 0px;
-  border-radius: 20px;
-  padding: 5px;
-  font-weight: bold;
-  cursor: pointer;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 15px;
+  display: none;
+}
+
+.state.state_show {
+  display: flex;
+}
+
+.state__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.state__circle_red {
+  background-color: #ff7272;
+}
+
+.state__circle_green {
+  background-color: #29a325;
+}
+
+.state__label {
+  margin: 0;
+  font-size: 14px;
 }
